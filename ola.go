@@ -2,11 +2,13 @@ package main
 
 import "fmt"
 
+const prefixHello = "Olá, "
+
 func Ola()string{
-	return "Olá mundão"
+	return prefixHello + "mundão"
 }
 func OlaYou(name string) string{
-	return "Olá, "+name
+	return prefixHello + name
 }
 
 func main(){
