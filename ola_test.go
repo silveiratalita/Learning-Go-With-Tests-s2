@@ -3,9 +3,17 @@ package main
 import "testing"
 
 func TestOla(t *testing.T){
-	resultado:=Ola()
-	esperado:="Olá mundão"
-	if resultado != esperado {
-	t.Errorf("resultado '%s', esperado '%s'", resultado, esperado)
+	result:=Ola()
+	expect:="Olá mundão"
+	if result != expect {
+	t.Errorf("result '%s', expect '%s'", result, expect)
+	}
+}
+
+func TestOlaYou(t *testing.T){
+	result:= OlaYou("Talita")
+	expect:= "Olá, Talita"
+	if result != expect{
+		t.Errorf("result '%s',expect '%s'",result, expect)
 	}
 }
