@@ -1,8 +1,5 @@
 package main
-
 import "fmt"
-
-
 
 func Ola()string{
 	return "Olá, mundão"
@@ -22,6 +19,10 @@ func OlaYou(name string, language string) string{
 		return prefixHello(language) + "mundão"
 	}
 	return prefixHello(language) + name
+}
+
+func AddValue(x,y int)int{
+	return x+y
 }
 
 func main(){

@@ -36,3 +36,16 @@ func TestOla(t *testing.T){
 		t.Errorf("result '%s',expect '%s'",result, expect)
 	}
 }
+func TestAdd(t *testing.T){
+	verifySumAndExpect:=func(t *testing.T, sum, expect int){
+		t.Helper()
+		if sum != expect{
+			t.Errorf("result '%d',expect '%d'",sum, expect)
+		}
+	}
+	t.Run("Adiciona 2 + 2", func(t *testing.T){
+		sum:= AddValue(2, 2)
+		expect:= 4
+		verifySumAndExpect(t, sum,expect)
+	})
+}
