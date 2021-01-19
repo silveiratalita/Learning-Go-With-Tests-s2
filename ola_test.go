@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"testing"
+ "math/rand"
+)
 
 
 func TestOlaYou(t *testing.T){
@@ -48,4 +51,23 @@ func TestAdd(t *testing.T){
 		expect:= 4
 		verifySumAndExpect(t, sum,expect)
 	})
+}
+
+func TestRepeat(t *testing.T){
+	verifyRepetitionAndExpect:=func(t *testing.T, repetition, expect string){
+		t.Helper()
+		if repetition != expect{
+			t.Errorf("result '%s',expect '%s'",repetition, expect)
+		}
+	}
+	t.Run("Rpetir o caractere 'a' por 5 veses", func(t *testing.T){
+		repeat:= Repeat("a", 5)
+		expect:= "aaaaa"
+		verifyRepetitionAndExpect(t, repeat ,expect)
+	})
+}
+func BenchmarkRandInt(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+			rand.Int()
+	}
 }

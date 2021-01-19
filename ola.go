@@ -25,7 +25,17 @@ func AddValue(x,y int)int{
 	return x+y
 }
 
+func Repeat(char string, num int) string{
+	var repetition string
+	for i:=0; i<num; i++{
+		repetition += char
+	}
+	return repetition
+}
+
+
 func main(){
 	fmt.Println(Ola())
 	fmt.Println(OlaYou("Talita","es"))
+
 }
